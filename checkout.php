@@ -81,6 +81,7 @@ else
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style-starter.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script> </head>
 <?php include_once('header.php'); ?>
    
@@ -180,7 +181,12 @@ else
         var name=jQuery('#name').val();
 		var time = jQuery('#pickTime').val();
         if (time == ""){
-            alert("Please pick a time");
+            // alert("Please pick a time");
+            Swal.fire({
+					icon: 'error',
+					title: 'Ohho...',
+					text:'Please Pick a Time!',
+				})
             return false;
         }
 

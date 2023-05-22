@@ -31,7 +31,7 @@ session_start();
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark stroke">
         <a class="navbar-brand" href="index.php">
-          <span class="fa fa-cutlery"></span> Canteen Management
+        <span class="fa fa-cutlery"></span> Canteen Management
         </a>
         <!-- if logo is image enable this   
       <a class="navbar-brand" href="#index.html">

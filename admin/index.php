@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login Form</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/login.css">
+	  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	  
+  
+</head>
 <?php
 include("../connection/connect.php");
 error_reporting(0);
@@ -18,11 +34,24 @@ if(isset($_POST['submit']))
 	    if(is_array($row))
 		{
         	$_SESSION["adm_id"] = $row['adm_id'];
+			echo "<script>
+										Swal.fire({
+											icon: 'success',
+											title: 'Success...',
+										  })
+										</script>";
 			header("refresh:1;url=dashboard.php");
 	    } 
 		else
 		{
 			$message = "Invalid Username or Password!";
+			echo "<script>
+										Swal.fire({
+											icon: 'error',
+											title: 'Oops...',
+											text:'Invalid Username or Password!',
+										  })
+										</script>";
 		}
 	 }
 	
@@ -101,9 +130,10 @@ if(isset($_POST['submit1'] ))
   <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
 <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
 <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <link rel="stylesheet" href="css/login.css">
-
+	  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	  
   
 </head>
 
